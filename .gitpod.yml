@@ -1,0 +1,11 @@
+# .gitpod.yml
+# Gitpod konfiguracija za pokretanje WordPress-a
+image: gitpod/workspace-full
+
+tasks:
+  - init: docker-compose up -d
+    command: sleep 999999
+
+ports:
+  - port: 8080
+    onOpen: open-preview
